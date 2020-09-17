@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "navbars",
+  "info": {
+    "name": "Navbar"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "links": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "href2": {
+      "type": "string"
+    },
+    "logosflash": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
