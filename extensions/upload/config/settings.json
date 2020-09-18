@@ -1,8 +1,8 @@
 {
   "provider": "aws-s3",
   "providerOptions": {
-    "accessKeyId": "AKIAI5FAOEJDMTTTE5GA",
-    "secretAccessKey": "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",
+    "accessKeyId": "AKIAIF2UUIHOUUGYR5JQ",
+    "secretAccessKey": "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",
     "region": "eu-west-3",
     "params": {
       "Bucket": "flashimages"
