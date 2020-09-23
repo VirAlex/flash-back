@@ -4,12 +4,25 @@ const stripe = require('stripe')(`${process.env.STRIPE_TEST}`);
 
 module.exports = {
   create: async ctx => {
-    console.log(ctx.request.body)
     const {
-      firstname,
       amount,
-      lastname,
-      email,
+      prenomProprietaireCarte,
+      nomProprietaireCarte,
+      emailProprietaireCarte,
+      phoneExp,
+      prenomExp,
+      addresseExp,
+      villeExp,
+      codePostalExp,
+      emailExp,
+      nomExp,
+      nomDest,
+      prenomDest,
+      addresseDest,
+      villeDest, 
+      codePostalDest,
+      emailDest,
+      phoneDest,
       token
     } = ctx.request.body;
 
@@ -17,19 +30,34 @@ module.exports = {
     try {
       await stripe.charges.create({
         // Transform cents to dollars.
-        amount: amount,
+        amount: amount * 100,
         currency: 'eur',
-        description: `Test`,
+        description: `Commande de ${nomProprietaireCarte} ${prenomProprietaireCarte}`,
         source: token,
       });
 
       // Register the order in the database
       try {
         const commande = await strapi.services.commande.create({
-          firstname,
           amount,
-          lastname,
-          email
+          prenomProprietaireCarte,
+          nomProprietaireCarte,
+          emailProprietaireCarte,
+          phoneExp,
+          prenomExp,
+          addresseExp,
+          villeExp,
+          codePostalExp,
+          emailExp,
+          nomExp,
+          nomDest,
+          prenomDest,
+          addresseDest,
+          villeDest, 
+          codePostalDest,
+          emailDest,
+          phoneDest,
+          token
         });
 
         return commande;

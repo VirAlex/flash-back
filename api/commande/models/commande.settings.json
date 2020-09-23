@@ -9,20 +9,59 @@
     "timestamps": true
   },
   "attributes": {
-    "email": {
+    "emailProprietaireCarte": {
       "type": "email"
     },
-    "token": {
+    "prenomProprietaireCarte": {
       "type": "string"
     },
-    "firstname": {
-      "type": "string"
-    },
-    "lastname": {
+    "nomProprietaireCarte": {
       "type": "string"
     },
     "amount": {
-      "type": "integer"
+      "type": "decimal"
+    },
+    "addresseDest": {
+      "type": "string"
+    },
+    "addresseExp": {
+      "type": "string"
+    },
+    "nomDest": {
+      "type": "string"
+    },
+    "prenomDest": {
+      "type": "string"
+    },
+    "nomExp": {
+      "type": "string"
+    },
+    "prenomExp": {
+      "type": "string"
+    },
+    "codePostalDest": {
+      "type": "string"
+    },
+    "villeDest": {
+      "type": "string"
+    },
+    "codePostalExp": {
+      "type": "string"
+    },
+    "villeExp": {
+      "type": "string"
+    },
+    "emailExp": {
+      "type": "email"
+    },
+    "emailDest": {
+      "type": "email"
+    },
+    "phoneDest": {
+      "type": "string"
+    },
+    "phoneExp": {
+      "type": "string"
     }
   }
 }
