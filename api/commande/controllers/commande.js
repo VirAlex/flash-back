@@ -5,9 +5,9 @@ module.exports = {
   create: async ctx => {
     console.log(ctx.request.body)
     const {
-      firstName,
+      firstname,
       amount,
-      lastName,
+      lastname,
       email,
       token
     } = ctx.request.body;
@@ -25,9 +25,9 @@ module.exports = {
       // Register the order in the database
       try {
         const commande = await strapi.services.commandes.create({
-          firstName,
+          firstname,
           amount,
-          lastName,
+          lastname,
           email
         });
 
