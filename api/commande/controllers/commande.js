@@ -1,5 +1,5 @@
 'use strict';
-const stripe = require('stripe')('sk_test_51H5slxCIQMePPibU8Ld76H0Tteu7V7KOkJQk0TZGNijyXCbg7Hiqfah1cCa4nDV6hvT3ABtwE2QWZ2ZhiI8uiGFr00CIH0w8vo');
+const stripe = require('stripe')('sk_test_51H5slxCIQMePPibU6ev9icIS8hZjBZluaaZvrSESh65bDJhONGVaxECUQcEgYqxaOmkGAUc7KIQoCITjAJjf8iOr00WVEvi7Om');
 
 module.exports = {
   create: async ctx => {
@@ -36,7 +36,7 @@ module.exports = {
         // Silent
       }
     } catch (err) {
-      // Silent
+    //   // Silent
     }
   },
 };
