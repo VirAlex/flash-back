@@ -24,7 +24,7 @@ module.exports = {
 
       // Register the order in the database
       try {
-        const commande = await strapi.services.commandes.create({
+        const commande = await strapi.services.commande.create({
           firstname,
           amount,
           lastname,
