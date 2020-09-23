@@ -1,5 +1,6 @@
 'use strict';
-const stripe = require('stripe')('sk_test_51H5slxCIQMePPibU6ev9icIS8hZjBZluaaZvrSESh65bDJhONGVaxECUQcEgYqxaOmkGAUc7KIQoCITjAJjf8iOr00WVEvi7Om');
+require('dotenv').config();
+const stripe = require('stripe')(`${process.env.STRIPE_TEST}`);
 
 module.exports = {
   create: async ctx => {
