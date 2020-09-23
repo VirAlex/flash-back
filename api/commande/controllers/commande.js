@@ -1,5 +1,5 @@
 'use strict';
-const stripe = require('stripe')(process.env.STRIPE_TEST);
+const stripe = require('stripe')('sk_test_51H5slxCIQMePPibU8Ld76H0Tteu7V7KOkJQk0TZGNijyXCbg7Hiqfah1cCa4nDV6hvT3ABtwE2QWZ2ZhiI8uiGFr00CIH0w8vo');
 
 module.exports = {
   create: async ctx => {
