@@ -1,9 +1,9 @@
-'use strict';
-require('dotenv').config();
-const stripe = require('stripe')(`${process.env.STRIPE_TEST}`);
+"use strict";
+require("dotenv").config();
+const stripe = require("stripe")(`${process.env.STRIPE_TEST}`);
 
 module.exports = {
-  create: async ctx => {
+  create: async (ctx) => {
     const {
       amount,
       prenomProprietaireCarte,
@@ -11,19 +11,17 @@ module.exports = {
       emailProprietaireCarte,
       phoneExp,
       prenomExp,
-      addresseExp,
-      villeExp,
       codePostalExp,
       emailExp,
       nomExp,
       nomDest,
       prenomDest,
-      addresseDest,
-      villeDest, 
       codePostalDest,
       emailDest,
       phoneDest,
-      token
+      adresseExpediteur,
+      adresseDestinataire,
+      token,
     } = ctx.request.body;
 
     // Charge the customer
@@ -31,7 +29,7 @@ module.exports = {
       await stripe.charges.create({
         // Transform cents to dollars.
         amount: amount * 100,
-        currency: 'eur',
+        currency: "eur",
         description: `Commande de ${nomProprietaireCarte} ${prenomProprietaireCarte}`,
         source: token,
       });
@@ -45,19 +43,17 @@ module.exports = {
           emailProprietaireCarte,
           phoneExp,
           prenomExp,
-          addresseExp,
-          villeExp,
           codePostalExp,
           emailExp,
           nomExp,
           nomDest,
           prenomDest,
-          addresseDest,
-          villeDest, 
           codePostalDest,
           emailDest,
           phoneDest,
-          token
+          adresseExpediteur,
+          adresseDestinataire,
+          token,
         });
 
         return commande;
@@ -65,7 +61,7 @@ module.exports = {
         // Silent
       }
     } catch (err) {
-    //   // Silent
+      //   // Silent
     }
   },
 };
