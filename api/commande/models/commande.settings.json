@@ -21,12 +21,6 @@
     "amount": {
       "type": "decimal"
     },
-    "addresseDest": {
-      "type": "string"
-    },
-    "addresseExp": {
-      "type": "string"
-    },
     "nomDest": {
       "type": "string"
     },
@@ -42,13 +36,7 @@
     "codePostalDest": {
       "type": "string"
     },
-    "villeDest": {
-      "type": "string"
-    },
     "codePostalExp": {
-      "type": "string"
-    },
-    "villeExp": {
       "type": "string"
     },
     "emailExp": {
@@ -62,6 +50,12 @@
     },
     "phoneExp": {
       "type": "string"
+    },
+    "adresseExpediteur": {
+      "type": "richtext"
+    },
+    "adresseDestinataire": {
+      "type": "richtext"
     }
   }
 }
